@@ -36,8 +36,8 @@ export default function HowItWorks() {
                     {step.number}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg">{step.title}</h4>
-                    <p className="text-gray-600">{step.description}</p>
+                    <h4 className="font-semibold text-lg text-[#1B263B]">{step.title}</h4>
+                    <p className="text-gray-700">{step.description}</p>
                   </div>
                 </div>
               ))}
@@ -53,8 +53,8 @@ export default function HowItWorks() {
                     {step.number}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg">{step.title}</h4>
-                    <p className="text-gray-600">{step.description}</p>
+                    <h4 className="font-semibold text-lg text-[#1B263B]">{step.title}</h4>
+                    <p className="text-gray-700">{step.description}</p>
                   </div>
                 </div>
               ))}

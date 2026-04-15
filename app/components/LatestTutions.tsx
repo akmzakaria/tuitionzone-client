@@ -52,7 +52,7 @@ export default function LatestTutions() {
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-[#F4D35E]">★</span>
-                <span className="font-semibold">{tution.rating}</span>
+                <span className="font-semibold text-[#1B263B]">{tution.rating}</span>
               </div>
             </div>
           ))}

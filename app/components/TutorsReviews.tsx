@@ -24,25 +24,25 @@ export default function TutorsReviews() {
   ]
 
   return (
-    <section className="py-16 bg-[#FFFFFF]">
+    <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-12 text-center text-[#006D77]">What Tutors Say</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center text-[#1B263B]">What Tutors Say</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {reviews.map((review) => (
             <div
               key={review.id}
-              className="bg-gradient-to-br from-[#F5F5F5] to-[#FFDDD2]/20 p-6 rounded-lg border-l-4 border-[#83C5BE]"
+              className="bg-white p-6 rounded-lg shadow border-l-4 border-[#F4D35E]"
             >
               <div className="flex gap-1 mb-3">
                 {[...Array(review.rating)].map((_, i) => (
-                  <span key={i} className="text-[#FFDDD2]">
+                  <span key={i} className="text-[#F4D35E]">
                     ★
                   </span>
                 ))}
               </div>
-              <p className="text-gray-700 mb-4">"​{review.review}"</p>
+              <p className="text-gray-700 mb-4">"{review.review}"</p>
               <div>
-                <p className="font-semibold text-[#006D77]">{review.name}</p>
+                <p className="font-semibold text-[#1B263B]">{review.name}</p>
                 <p className="text-sm text-gray-600">{review.role}</p>
               </div>
             </div>
