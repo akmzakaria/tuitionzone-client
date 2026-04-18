@@ -1,4 +1,4 @@
-import Header from './components/Header'
+import Navbar from './components/Navbar'
 import Banner from './components/Banner'
 import LatestTutions from './components/LatestTutions'
 import Categories from './components/Categories'
@@ -13,7 +13,7 @@ import AboutUsPage from './aboutUs/page'
 export default function Home() {
   return (
     <div className="w-full">
-      <Header />
+      <Navbar />
       <Banner />
       <LatestTutions />
       <Categories />
