@@ -20,7 +20,7 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a href="#about" className="hover:text-[#F4D35E] transition duration-200">
+            <a href="/aboutUs" className="hover:text-[#F4D35E] transition duration-200">
               About
             </a>
           </li>
