@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useState } from 'react'
 
 export default function Navbar() {
@@ -96,7 +97,9 @@ export default function Navbar() {
 
           {/* <h1 className="text-2xl font-bold text-[#F4D35E] whitespace-nowrap">TutionZoneBD</h1> */}
 
-          <img src="/tuitionzonebd2_bg-removed_edited.png" className="w-35" alt="" />
+          <Link href={'/'}>
+            <img src="/tuitionzonebd2_bg-removed_edited.png" className="w-35" alt="" />
+          </Link>
 
           {/* Desktop Navigation */}
           <ul className="hidden md:flex gap-8 text-white font-medium flex-1 justify-center">
