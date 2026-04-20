@@ -1,5 +1,5 @@
+import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-// import Navbar from '../components/Navbar'
 
 export const metadata = {
   title: 'Privacy Policy - TutionZone',
@@ -9,7 +9,7 @@ export const metadata = {
 export default function PrivacyPolicy() {
   return (
     <div className="w-full flex flex-col min-h-screen">
-      {/* <Navbar /> */}
+      <Navbar />
       <main className="flex-1 bg-[#F8F9FA]">
         <div className="max-w-4xl mx-auto px-6 py-12">
           <h1 className="text-4xl font-bold text-[#1B263B] mb-2">Privacy Policy</h1>
