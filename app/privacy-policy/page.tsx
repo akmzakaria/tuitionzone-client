@@ -1,3 +1,4 @@
+
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 
@@ -9,6 +10,7 @@ export const metadata = {
 export default function PrivacyPolicy() {
   return (
     <div className="w-full flex flex-col min-h-screen">
+
       <Navbar />
       <main className="flex-1 bg-[#F8F9FA]">
         <div className="max-w-4xl mx-auto px-6 py-12">
