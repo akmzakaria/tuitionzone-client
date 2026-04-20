@@ -8,6 +8,7 @@ import GuardiansReviews from './components/GuardiansReviews'
 import TutorsReviews from './components/TutorsReviews'
 import HowItWorks from './components/HowItWorks'
 import Footer from './components/Footer'
+import AboutUsPage from './aboutUs/page'
 
 export default function Home() {
   return (
@@ -22,6 +23,9 @@ export default function Home() {
       <TutorsReviews />
       <HowItWorks />
       <Footer />
+
+      {/* mostakim */}
+      {/* <AboutUsPage /> */}
     </div>
   )
 }
