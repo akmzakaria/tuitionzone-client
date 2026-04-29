@@ -33,7 +33,7 @@ export default function Footer() {
             <h4 className="text-[#F4D35E] font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:text-white transition">
+                <a href="/aboutUs" className="hover:text-white transition">
                   About Us
                 </a>
               </li>
