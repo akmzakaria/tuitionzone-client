@@ -57,6 +57,8 @@ export async function initializeDatabase() {
         name: userData.name,
         password: hashedPassword,
         role: userData.role,
+        phone: userData.phone,
+        gender: userData.gender,
         isActive: true,
         createdAt: new Date(),
         updatedAt: new Date(),

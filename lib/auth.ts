@@ -1,4 +1,4 @@
-import type { NextAuthConfig } from 'next-auth'
+import type { NextAuthOptions } from 'next-auth'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import GoogleProvider from 'next-auth/providers/google'
 import { authenticateUser, initializeDatabase, findUserByEmail, createUser } from '@/lib/db/users'
@@ -59,7 +59,7 @@ const googleProvider = GoogleProvider({
   clientSecret: process.env.GOOGLE_CLIENT_SECRET || '',
 })
 
-export const authConfig: NextAuthConfig = {
+export const authConfig: NextAuthOptions = {
   providers: [credentialsProvider, googleProvider],
   pages: {
     signIn: '/auth/signin',
@@ -88,7 +88,7 @@ export const authConfig: NextAuthConfig = {
     async session({ session, token }) {
       if (session.user) {
         session.user.id = token.id as string
-        session.user.role = token.role as string
+        session.user.role = token.role as UserRole
       }
       return session
     },
@@ -145,13 +145,6 @@ export const authConfig: NextAuthConfig = {
      */
     async signOut() {
       console.log('User signed out')
-    },
-
-    /**
-     * Error Event: Called when error occurs during authentication
-     */
-    async error({ error }) {
-      console.error('Authentication error:', error)
     },
   },
   session: {
