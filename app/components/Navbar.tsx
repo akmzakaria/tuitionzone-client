@@ -1,12 +1,17 @@
 'use client'
 
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMenuClosing, setIsMenuClosing] = useState(false)
   const [activeNav, setActiveNav] = useState('home')
+
+  // TODO: Replace with actual auth state
+  const isLoggedIn = true
+  const router = useRouter()
 
   const toggleMenu = () => {
     if (isMenuOpen) {
@@ -25,8 +30,13 @@ export default function Navbar() {
     }, 300)
   }
 
-  const handleNavClick = (navItem) => {
+  const handleNavClick = (navItem: string) => {
     setActiveNav(navItem)
+  }
+
+  if (!isLoggedIn) {
+    router.replace('/login')
+    return
   }
 
   return (
@@ -123,6 +133,13 @@ export default function Navbar() {
                 About
               </a>
             </li>
+            {isLoggedIn && (
+              <li>
+                <Link href="/dashboard" className="hover:text-[#F4D35E] transition duration-200">
+                  Dashboard
+                </Link>
+              </li>
+            )}
           </ul>
 
           <button className="bg-[#415A77] text-white px-6 py-2 rounded-lg hover:bg-[#F4D35E] hover:text-[#1B263B] transition duration-200 font-bold border-2 border-[#F4D35E]">
@@ -186,6 +203,17 @@ export default function Navbar() {
                 About
               </a>
             </li>
+            {isLoggedIn && (
+              <li>
+                <Link
+                  href="/dashboard"
+                  onClick={closeMenu}
+                  className="hover:text-[#F4D35E] transition duration-200 block"
+                >
+                  Dashboard
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
       )}
