@@ -139,7 +139,10 @@ export default function TuitionRequests({ onViewDetails }: TuitionRequestsProps)
                         onClick={() => handleApprove(request.id)}
                         title="Approve"
                         className="p-2 rounded-md transition-all duration-200 hover:shadow-lg active:scale-95"
-                        style={{ backgroundColor: theme.colors.secondary, color: theme.colors.primary }}
+                        style={{
+                          backgroundColor: theme.colors.secondary,
+                          color: theme.colors.primary,
+                        }}
                       >
                         <svg
                           className="w-5 h-5"
